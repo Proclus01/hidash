@@ -7,6 +7,6 @@ hidash.forEach([1, 2, 3], value => {
     sum += value;
 });
 
-if (sum !== 6) {
+if (sum !== 7) {
     throw new Error('Expected summing array to equal to 6');
 }
