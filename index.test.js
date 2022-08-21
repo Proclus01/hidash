@@ -23,16 +23,16 @@ if (sum !== 6) {
 
 // Run the function first
 const result = hidash.map([1, 2, 3], value => {
-    return value * 2
+    return value * 2;
 });
 
 // Use a chain of conditionals to check every array value
 if (result[0] !== 2) {
     throw new Error(`Expected to find 2, but found ${result[0]}`);
 } 
-if (result[1] !== 2) {
+if (result[1] !== 4) {
     throw new Error(`Expected to find 4, but found ${result[1]}`);
 }
-if (result[2] !== 2) {
+if (result[2] !== 6) {
     throw new Error(`Expected to find 6, but found ${result[2]}`);
 }
