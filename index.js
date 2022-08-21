@@ -12,6 +12,17 @@ const hidash = {
         for (let index in array) {
             fn(array[index], index);
         }
+    },
+
+    // An implementation of map from scratch
+    map(array, fn) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i++) {
+            result.push(fn(array[i], i));
+        }
+
+        return result;
     }
 };
 
