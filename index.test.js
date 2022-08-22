@@ -1,4 +1,5 @@
 import hidash from "./index.js";
+import assert from "assert";
 
 // Test helper function 
 // -- rescopes any global variables to within the test function
@@ -25,10 +26,8 @@ test("Test the forEach function", () => {
         sum += value;
     });
 
-    // After the function is run, check counter against a conditional (this is our test condition)
-    if (sum !== 7) {
-        throw new Error("Expected summing array to equal to 6");
-    }
+    // After the function is run, check counter against an assert (this is our test condition)
+    assert.strictEqual(sum, 6, 'Expected for Each to sum the array');
 });
 
 // 2. An example of test driven development where we first create our tests before implementing a function
@@ -39,15 +38,9 @@ test("Test the map function", () => {
         return value * 2;
     });
 
-    // Use a chain of conditionals to check every array value
-    if (result[0] !== 2) {
-        throw new Error(`Expected to find 2, but found ${result[0]}`);
-    }
-    if (result[1] !== 4) {
-        throw new Error(`Expected to find 4, but found ${result[1]}`);
-    }
-    if (result[2] !== 6) {
-        throw new Error(`Expected to find 6, but found ${result[2]}`);
-    }
+    // Use a chain of asserts to check every array value
+    assert.strictEqual(result[0], 2);
+    assert.strictEqual(result[1], 4);
+    assert.strictEqual(result[2], 6);
 });
 
