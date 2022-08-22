@@ -35,8 +35,6 @@ test("Test the map function", () => {
     });
 
     // Use a chain of asserts to check every array value
-    assert.strictEqual(result[0], 2); // normally we modify some of these values to make a failing test
-    assert.strictEqual(result[1], 4);
-    assert.strictEqual(result[2], 6);
+    assert.deepStrictEqual(result, [2, 4, 6]); // normally we modify some of these values to make a failing test
 });
 
