@@ -26,7 +26,7 @@ test("Test the forEach function", () => {
     });
 
     // After the function is run, check counter against a conditional (this is our test condition)
-    if (sum !== 6) {
+    if (sum !== 7) {
         throw new Error("Expected summing array to equal to 6");
     }
 });
