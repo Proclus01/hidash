@@ -15,8 +15,6 @@ const test = (description, fn) => {
     }
 };
 
-// 1. A simple example of Manual Testing of code
-
 test("Test the forEach function", () => {
     // Initialize a counter to collect values from our example function
     let sum = 0;
@@ -30,8 +28,6 @@ test("Test the forEach function", () => {
     assert.strictEqual(sum, 6, 'Expected for Each to sum the array');
 });
 
-// 2. An example of test driven development where we first create our tests before implementing a function
-
 test("Test the map function", () => {
     // Run the function first
     const result = hidash.map([1, 2, 3], (value) => {
@@ -39,7 +35,7 @@ test("Test the map function", () => {
     });
 
     // Use a chain of asserts to check every array value
-    assert.strictEqual(result[0], 2);
+    assert.strictEqual(result[0], 2); // normally we modify some of these values to make a failing test
     assert.strictEqual(result[1], 4);
     assert.strictEqual(result[2], 6);
 });
