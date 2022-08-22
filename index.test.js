@@ -1,21 +1,21 @@
 import hidash from "./index.js";
 import assert from "assert";
 
-// Test helper function 
-// -- rescopes any global variables to within the test function
-const test = (description, fn) => {
-    // -- automated descriptions for every test run as a title, right above any error message
-    console.log("----", description);
+// // Test helper function 
+// // -- rescopes any global variables to within the test function
+// const test = (description, fn) => {
+//     // -- automated descriptions for every test run as a title, right above any error message
+//     console.log("----", description);
 
-    // -- ensures that the program never crashes when the test fails
-    try {
-        fn();
-    } catch (err) {
-        console.log(err.message);
-    }
-};
+//     // -- ensures that the program never crashes when the test fails
+//     try {
+//         fn();
+//     } catch (err) {
+//         console.log(err.message);
+//     }
+// };
 
-test("Test the forEach function", () => {
+it("Test the forEach function", () => {
     // Initialize a counter to collect values from our example function
     let sum = 0;
 
@@ -28,7 +28,7 @@ test("Test the forEach function", () => {
     assert.strictEqual(sum, 6, 'Expected for Each to sum the array');
 });
 
-test("Test the map function", () => {
+it("Test the map function", () => {
     // Run the function first
     const result = hidash.map([1, 2, 3], (value) => {
         return value * 2;
